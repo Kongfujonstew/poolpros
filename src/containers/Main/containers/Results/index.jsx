@@ -46,10 +46,10 @@ class Results extends PureComponent {
 Results.propTypes = {
   results: PropTypes.arrayOf(PropTypes.shape({
   })).isRequired,
-  selections: PropTypes.arrayOf({
+  selections: PropTypes.arrayOf(PropTypes.shape({
     field: PropTypes.string.isRequired,
     isChecked: PropTypes.bool.isRequired
-  }).isRequired,
+  })).isRequired
 };
 
 const mapStateToProps = state => ({

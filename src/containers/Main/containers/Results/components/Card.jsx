@@ -63,7 +63,7 @@ const Card = (props) => {
 
             return (
               <div key={i} className={certificationItem}>
-                <img src={images[certification]} alt={`${certification} image`} />
+                <img src={images[certification]} alt={`${certification}`} />
                 <span>{certification}</span>
               </div>
             );
@@ -74,7 +74,7 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  certifications: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  certifications: PropTypes.arrayOf(PropTypes.string).isRequired,
   companyID: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   phone1: PropTypes.string.isRequired,

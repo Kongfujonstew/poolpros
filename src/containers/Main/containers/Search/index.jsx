@@ -96,10 +96,10 @@ Search.propTypes = {
   postalCode: PropTypes.number.isRequired,
   results: PropTypes.arrayOf(PropTypes.shape({
   })).isRequired,
-  selections: PropTypes.arrayOf({
+  selections: PropTypes.arrayOf(PropTypes.shape({
     field: PropTypes.string.isRequired,
     isChecked: PropTypes.bool.isRequired
-  }).isRequired,
+  })).isRequired,
   toggleSelection: PropTypes.func.isRequired
 };
 

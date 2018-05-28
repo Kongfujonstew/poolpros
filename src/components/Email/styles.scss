@@ -1,11 +1,73 @@
-.dialog {
-  border-color: transparent;
-  padding: 0;
-  position: fixed;
-  width: 250px;
-  height: 700px;
+@import 'theme/global.scss';
+
+.div {
+
 }
 
 .container1 {
+  background-color: $darkBlue;
+  color: $white;
+  padding: 16px 16px 32px 24px;
+  div {
+    text-align: right;
+    img {
+      width: 16px;
+    }
+    @include hover;
+  }
+  h3 {
+    font-weight: 900;
+    margin: 0;
+  }
+  span {
+    font-size: $fontXLarge;
+    font-weight: 100;
+  }
+}
+
+.container2 {
+  background-color: $greyBackground;
+  margin: 24px;
   padding: 16px;
+  label {
+    color: $greyText;
+    font-size: $fontSmall;
+    font-weight: bold;
+  }
+  .inputItem {
+    justify-content: space-between;
+    margin-top: 8px;
+    img {
+      height: 20px;
+      transform: translate(-4px, -2px);
+      width: 20px;
+    }
+    @include container;
+  }
+  .commentItem {
+    flex-direction: column;
+    margin-top: 12px;
+    width: calc(100% - 6px);
+    label {
+      margin-bottom: 8px;
+    }
+    @include container;
+  }
+  .checkboxes {
+    flex-wrap: wrap;
+    margin-top: 12px;
+    label {
+      flex-basis: 100%;
+      margin-bottom: 8px;
+    }
+    @include container;
+  }
+}
+
+.send {
+  color: $lightBlue;
+  font-weight: 900;
+  padding: 0 36px 24px 0 !important;
+  text-align: right;
+  @include hover;
 }

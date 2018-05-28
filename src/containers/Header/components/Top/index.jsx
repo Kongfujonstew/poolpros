@@ -14,8 +14,5 @@ export default () => (
     <span style={{ marginRight: '8px' }} className={span}>
       Commercial Service
     </span>
-    <span className={span}>
-      i
-    </span>
   </section>
 );

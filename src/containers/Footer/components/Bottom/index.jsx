@@ -13,14 +13,11 @@ export default () => (
       <span>|</span>
       <div>
         <span>Commercial Service</span>
-        <span>i</span>
       </div>
     </div>
     <div className={container2}>
       <span>&copy; 2017 Pool Pros</span>
-      <span>|</span>
       <span>Privacy Policy</span>
-      <span>|</span>
       <span>Terms and Conditions</span>
     </div>
 

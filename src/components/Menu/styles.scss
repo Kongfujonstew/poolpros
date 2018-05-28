@@ -1,1 +1,45 @@
-styles.scss
+@import 'theme/global.scss';
+
+.section {
+  background-color: $white;
+  width: 100%;
+  z-index: 100;
+  @media (min-width: 768px) {
+    max-width: 400px;
+    position: absolute;
+    right: 12px;
+    width: 30vw;
+  }
+}
+
+.close {
+  color: $lightBlue;
+  padding: 16px 16px 0 16px;
+  text-align: right;
+  @include hover;
+}
+
+.title {
+  color: $blue;
+  padding: 0 0 16px 0;
+  font-size: $fontLarge;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menuItem {
+  background-color: $greyBackground;
+  border-top: 1px solid $white;
+  color: $greyText;
+  padding: 16px 16px;
+  div {
+    width: 95%;
+  }
+  img {
+    height: 16px;
+    transform: translateY(3px);
+    width: 14px;
+  }
+  @include container;
+  @include hover;
+}

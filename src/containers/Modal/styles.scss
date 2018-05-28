@@ -1,11 +1,8 @@
 .dialog {
-  border-color: transparent;
+  border: none;
+  min-width: 300px;
+  max-width: 600px;
   padding: 0;
   position: fixed;
-  width: 250px;
-  height: 700px;
-}
-
-.container1 {
-  padding: 16px;
+  width: 50vw;
 }

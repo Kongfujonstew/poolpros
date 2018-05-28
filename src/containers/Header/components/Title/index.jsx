@@ -13,7 +13,7 @@ const {
   span
 } = styles;
 
-export default () => (
+export default (props) => (
   <section className={section}>
     <div >
       <img className={image1} src="images/pool-pros-logo.png" alt="pool-pros-logo" />
@@ -50,7 +50,12 @@ export default () => (
         />
       </div>
       <div className={relative}>
-        <img className={image2} src="images/menu-icon-mobile.png" alt="menu icon" />
+        <img
+          onClick={props.toggleMenu}
+          className={image2}
+          src="images/menu-icon-mobile.png"
+          alt="menu icon"
+        />
       </div>
     </div>
   </section>

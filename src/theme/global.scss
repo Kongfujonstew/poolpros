@@ -7,8 +7,8 @@ $blue: rgb(29, 98, 218);
 $darkBlue: rgb(8, 52, 125);
 $lightBlue:  rgb(82, 204, 203);
 $white: white;
-$lightGrey: grey;
-$greyText: grey;
+$lightGrey: rgb(211, 210, 211);
+$greyText: rgb(81, 80, 81);
 $greyBackground: rgb(244, 244, 244);
 
 $pageMargin: 42px;
@@ -57,6 +57,18 @@ img {
 section {
   min-width: 350px;
   width: 100%;
+}
+
+input, textarea {
+  border: 1px solid $lightGrey;
+  font-size: $fontMedium;
+  height: 24px;
+  outline: none;
+  padding: 8px 8px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 /*

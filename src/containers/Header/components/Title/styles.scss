@@ -1,0 +1,61 @@
+@import 'theme/global.scss';
+
+.section {
+  padding: 12px 0;
+  color: $blue;
+  @include container;
+  @media (min-width: 480px) {
+    padding: 24px 0;
+  }
+}
+
+.span {
+  font-size: $fontSmall;
+  font-weight: bold;
+  margin-right: 4.5vw;
+  @include hover;
+}
+
+.image1 {
+  width: 180px;
+  margin-left: 12px;
+  transform: translateY(6px);
+  @media (min-width: 480px) {
+    margin-left: $pageMargin;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.image2 {
+  width: 56px;
+  position: absolute;
+  top: -4px;
+  left: -32px;
+  z-index: 10;
+  @include hover;
+  @media (min-width: 480px) {
+    width: 48px;
+  }
+}
+
+.container2 {
+  width: 100%;
+  padding-right: $pageMargin;
+  text-align: right;
+  @include md-up;
+}
+
+.container3 {
+  width: 100%;
+  justify-content: space-around;
+  @include sm-down;
+  @include container;
+}
+
+.button {
+  margin-right: $pageMargin;
+}
+

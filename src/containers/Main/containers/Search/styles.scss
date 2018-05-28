@@ -1,0 +1,92 @@
+@import 'theme/global.scss';
+
+.section {
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding-left: $pageMargin;
+    padding-right: $pageMargin + 12px;
+  }
+}
+
+.container {
+  background-color: $greyBackground;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+
+  @include container;
+  @media (min-width: 768px) {
+    border-radius: 8px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-width: 680px;
+    padding: 8px 16px;
+  }
+}
+
+.checkboxContainer {
+  background-color: $white;
+  margin: 24px;
+  margin-top: 0px;
+  width: 100%;
+  @media (min-width: 768px) {
+    background-color: unset;
+    margin: unset;
+    width: unset;
+  }
+}
+
+.filter, .postal {
+  color: $blue;
+  flex-basis: 37%;
+  font-size: $fontMedium;
+  font-weight: bold;
+  margin-top: 8px;
+  padding: 6px 0 12px 16px;
+  @media (min-width: 768px) {
+    flex-basis: unset;
+    margin-top: 0;
+    width: unset;
+  }
+}
+
+.postal {
+  @media (min-width: 768px) {
+    padding:  16px 24px 12px 0px;
+    border-right: 1px solid $greyText;
+  }
+}
+
+.filter {
+  background-color: $white;
+  border: 1px solid $lightGrey;
+  border-bottom: none;
+  color: $black;
+  margin-right: 16px;
+  text-align: center;
+  padding-left: 0;
+  @include hover;
+  @media (min-width: 768px) {
+    background-color: unset;
+    border: unset;
+    color: $blue;
+    padding: 16px 24px 12px 24px;
+    text-align: unset;
+  }
+  &.hidden {
+    border-bottom: 1px solid $lightGrey;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+}
+
+.checkboxes {
+  border: 1px solid $lightGrey;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  @media (min-width: 768px) {
+    border: unset;
+    flex-direction: unset;
+  }
+}

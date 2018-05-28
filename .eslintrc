@@ -1,0 +1,45 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": false,
+      "modules": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": false,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "restParams": true,
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+  },
+  "rules": {
+    "max-len": [1, 120, 2],
+    "comma-dangle": [0],
+    "react/jsx-filename-extension": [0],
+    "eol-last": [0],
+    "import/no-unresolved": [0],
+    "import/no-extraneous-dependencies": [0],
+    "import/extensions": [0],
+    "array-callback-return": [0],
+    "no-param-reassign": [0],
+    "no-unused-expressions": [0]
+  },
+  "extends":["eslint:recommended","plugin:react/recommended","airbnb"]
+}

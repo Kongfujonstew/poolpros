@@ -1,0 +1,100 @@
+@import 'theme/global.scss';
+
+$stack-margin: 16px;
+
+.div {
+  background-color: $white;
+  border: 1px solid $lightGrey;
+  border-radius: 8px;
+  box-shadow:
+    0 1px 2px $greyText, 
+        0px 1px 2px $greyText, 1px 1px 2px $greyText;
+  margin-top: 24px;
+  width: 350px;
+  @media (min-width: 768px) {
+    margin-right: 12px;
+  }
+}
+
+.container1 {
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 $pageMargin;
+  @include container;
+}
+
+@mixin stackme {
+  margin-top: $stack-margin;
+}
+
+@mixin greyText {
+  color: $greyText;
+}
+
+.nameItem {
+  align-items: center;
+  border-bottom: 1px solid $greyText;
+  display: flex;
+  justify-content: center;
+  min-height: 88px;
+  h1 {
+    color: $greyText;
+    font-weight: 100;
+  }
+}
+
+.phoneItem {
+  align-items: center;
+  justify-content: space-evenly;
+  img {
+    width: 24px;
+  }
+  h1 {
+    color: $black;
+    font-weight: 900;
+    line-height: 1.5;
+  }
+  @include stackme;
+  @include container;
+}
+
+.talkItem {
+  font-size: $fontSmall;
+  @include greyText;
+  @include stackme;
+}
+
+.buttonItem {
+  @include stackme;
+}
+
+.hoursItem {
+  flex-direction: column;
+  font-size: $fontSmall;
+  line-height: 1.5;
+  margin-top: $stack-margin * 2;
+  @include container;
+  @include greyText;
+}
+
+.container2 {
+  background-color: $greyBackground;
+  border-radius: 0 0 8px 8px;
+  flex-wrap: wrap;
+  min-height: 32px;
+  padding: 16px;
+  @include container;
+  @include greyText;
+  @include stackme;
+}
+
+.certificationItem {
+  flex-basis: 50%;
+  font-size: $fontSmall;
+  img {
+    padding-left: 24px;
+    padding-right: 12px;
+    width: 12px;
+  }
+}

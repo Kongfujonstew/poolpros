@@ -1,0 +1,35 @@
+@import 'theme/global.scss';
+
+.div {
+  min-width: 88px;
+  max-width: 125px;
+  @include hover;
+}
+
+.checkbox {
+  background-color: $white;
+  display: inline-block;
+  margin-right: 8px;
+  transform: translateY(4px);
+  &.grey {
+    background-color: $lightGrey;
+  }
+}
+
+.notChecked {
+  border-radius: 4px;
+  height: 18px;
+  width: 18px;
+}
+
+.checked {
+  border: 6px solid $blue;
+  border-radius: 4px;
+  height: 6px;
+  width: 6px;
+}
+
+.span {
+  color: $greyText;
+  font-size: $fontSmall;
+}

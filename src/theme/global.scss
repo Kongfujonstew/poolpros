@@ -1,0 +1,105 @@
+/*
+Variables
+*/
+
+$black: black;
+$blue: rgb(29, 98, 218);
+$darkBlue: rgb(8, 52, 125);
+$lightBlue:  rgb(82, 204, 203);
+$white: white;
+$lightGrey: grey;
+$greyText: grey;
+$greyBackground: rgb(244, 244, 244);
+
+$pageMargin: 42px;
+
+$fontMini: 9px;
+$fontSmall: 11px;
+$fontMedium: 14px;
+$fontLarge: 18px;
+$fontXLarge: 22px;
+$fontJumbo: 36px;
+
+/*
+Typography
+*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/*
+Resets
+*/
+
+body {
+  min-height: 100vh;
+  padding-bottom: 300px;
+  position: relative;
+}
+
+body, div, ul, h1 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  li {
+    display: inline;
+  }
+}
+
+img {
+  height: auto;
+}
+
+section {
+  min-width: 350px;
+  width: 100%;
+}
+
+/*
+Mixins
+*/
+
+@mixin container {
+  display: flex;
+}
+
+@mixin hover {
+  cursor: pointer;
+}
+
+@mixin button {
+  border-radius: 2px;
+  display: inline-block;
+  font-size: $fontSmall;
+  font-weight: bold;
+  padding: 8px 15px 10px 12px;
+  img {
+    margin-right: 6px;
+    transform: translateY(2px);
+    width: 9px;
+  }
+  @include hover;
+}
+
+/*
+Responsive
+*/
+
+@mixin sm-down {
+  display: inline-block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+@mixin md-up {
+  display: none;
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+}
+

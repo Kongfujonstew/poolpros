@@ -1,0 +1,11 @@
+@import 'theme/global.scss';
+
+.container {
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @include container;
+  @media (min-width: 768px) {
+    padding: 0 $pageMargin;
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "fed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env=development",
+    "build": "find build/ -type f -maxdepth 1 -delete && webpack -p --env=production",
+    "lint": "eslint -c .eslintrc --ext=jsx --ext=js src/ --fix"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-hot-loader": "next",
+    "react-jsx-parser": "^1.2.5",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
+    "redux-segment": "^1.6.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "add-asset-html-webpack-plugin": "^2.1.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-runtime": "^1.0.7",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.4",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "script-ext-html-webpack-plugin": "^2.0.1",
+    "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.9.1",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "repository": "git+https://github.com/Kongfujonstew/poolpros.git",
+  "keywords": [
+    "Pools"
+  ],
+  "author": "JMS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kongfujonstew/poolpros/issues"
+  },
+  "homepage": "https://github.com/Kongfujonstew/poolpros#readme"
+}

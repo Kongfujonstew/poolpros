@@ -1,0 +1,27 @@
+@import 'theme/global.scss';
+
+.section {
+  background-color: $blue;
+  color: $white;
+  text-align: right;
+  padding: 8px;
+  @include container;
+  @include md-up;
+}
+
+.span {
+  font-size: $fontMini;
+  margin-right: $pageMargin;
+  @include hover;
+}
+
+.button {
+  border: 1px solid $blue;
+  &.lightBlue {
+    border: 1px solid $lightBlue;
+    span {
+      color: $darkBlue;
+    }
+  }
+  @include button;
+}

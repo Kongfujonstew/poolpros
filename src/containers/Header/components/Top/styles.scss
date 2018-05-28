@@ -1,0 +1,16 @@
+@import 'theme/global.scss';
+
+.section {
+  background-color: $darkBlue;
+  color: $white;
+  text-align: right;
+  padding: 7px 0;
+  @include container;
+  @include md-up;
+}
+
+.span {
+  font-size: $fontMini;
+  margin-right: $pageMargin;
+  @include hover;
+}

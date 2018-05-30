@@ -62,7 +62,10 @@ class Email extends PureComponent {
           <div>
             <div className={inputItem}>
               <label htmlFor="name">First and last name</label>
-              <img src={this.state.name.value.split(' ').length > 1 ? this.images[1] : this.images[0]}/>
+              <img src={this.state.name.value.split(' ')[1] && this.state.name.value.split(' ')[1].length ?
+                this.images[1] :
+                this.images[0]}
+              />
             </div>
             <input
               value={this.state.name.value}

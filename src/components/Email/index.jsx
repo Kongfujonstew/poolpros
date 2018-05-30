@@ -18,23 +18,38 @@ class Email extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = { yes: false };
+    this.state = {
+      name: { pristine: true, value: '' },
+      phone: { pristine: true, value: '' },
+      email: { pristine: true, value: '' },
+      yes: false
+    };
+
+    this.images = [
+      //TODO: Add image for invalid state
+      'images/circle-form.png',
+      'images/checkmark-circle.png',
+    ];
+  }
+
+  handleFormInput = ({ target: { name, value } }) => {
+    this.setState({ [name]: { ...this.state[name], value } });
   }
 
   handleClickCheckbox = yesOrNo => () => {
     this.setState({ yes: yesOrNo });
   }
 
-  // TODO: handle input change and validate
-  // handleInput = () => {
-
-  // }
-
   render() {
     const { closeModal, results } = this.props;
     const dealer = results
       .filter(thisDealer => thisDealer.data.companyID === this.props.dealer)[0];
     const { name } = dealer.data;
+    let emailValid = true;
+    if (this.email) {
+      emailValid = this.email.validity.valid
+    }
+    //TODO: Move inputs/text area out to separate component
 
     return (
       <div className={div}>
@@ -47,23 +62,45 @@ class Email extends PureComponent {
           <div>
             <div className={inputItem}>
               <label htmlFor="name">First and last name</label>
-              <img src="images/checkmark-circle.png" />
+              <img src={this.state.name.value.split(' ').length > 1 ? this.images[1] : this.images[0]}/>
             </div>
-            <input style={{ width: 'calc(100% - 24px)' }} name="name" type="text" />
+            <input
+              value={this.state.name.value}
+              onChange={this.handleFormInput}
+              style={{ width: 'calc(100% - 24px)' }}
+              name="name"
+              type="text"
+            />
           </div>
           <div>
             <div className={inputItem}>
               <label htmlFor="phone">Phone number</label>
-              <img src="images/checkmark-circle.png" />
+              <img src={this.state.phone.value.length > 7 ? this.images[1] : this.images[0]} />
             </div>
-            <input name="phone" type="phone" />
+            <input
+              value={this.state.phone.value}
+              onChange={this.handleFormInput}
+              name="phone"
+              type="phone"
+            />
           </div>
           <div>
             <div className={inputItem}>
               <label htmlFor="email">Email address</label>
-              <img src="images/checkmark-circle.png" />
+              <img src={emailValid && this.state.email.value.length ?
+                this.images[1] :
+                this.images[0]
+              } />
             </div>
-            <input style={{ width: 'calc(100% - 24px)' }} name="email" type="email" />
+            <input
+              id="email"
+              ref={(ref) => this.email = ref}
+              value={this.state.email.value}
+              onChange={this.handleFormInput}
+              style={{ width: 'calc(100% - 24px)' }}
+              name="email"
+              type="email"
+            />
           </div>
           <div className={commentItem}>
             <label htmlFor="comments">Comments or questions</label>

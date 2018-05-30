@@ -65,6 +65,9 @@ input, textarea {
   height: 24px;
   outline: none;
   padding: 8px 8px;
+  &:invalid {
+    background-color: antiquewhite;
+  }
 }
 
 textarea {
